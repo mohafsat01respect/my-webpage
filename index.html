@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">  
+      <link href="https://unpkg.com/boxiicons@2.1.4/css/boxiicons.min.css" rel="stylesheet" > 
+     <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none; 
+    /* list-style: none; */
+}
+.header{
+      position: fixed; 
+     text-decoration: none; 
+     top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 15px 12px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}
+.logo{
+    font-size: 25px;
+    color: white;
+     font-weight: 500; 
+     transition: 0.1s ease; 
+}
+.logo:hover{
+    color: orangered;
+    text-shadow: 0 0 25px orangered, 0 0 50px orangered;
+    transform: scale(1.1);
+}
+span{
+    color: orangered;
+}
+.navbar a{
+    font-size: 15px;
+    color: white;
+     font-weight: 500px; 
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.navbar a:hover{
+    color: orangered;
+    border-bottom: 4px solid orangered;
+}
+.contact{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+.contact:hover{
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 30px 12px 0;
+}
+.home-content{
+    max-width: 800px;
+}
+.home-content h3{
+    font-size: 42px;
+}
+.home-content h1{
+    font-size: 60px;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 15px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.btn-2{
+   padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    cursor: pointer; 
+    font-weight: 600;
+}
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
+.img-box img{
+    border-radius: 50%;
+    width: 300px;
+    height: 500px;
+}
+
+  ::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+     width: 50px; 
+}  
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: black;
+}
+.about-img img{
+    position: relative;
+    width: 300px;
+    box-shadow: 0 0 25px orangered, 0 0 50px orangered;
+    border-radius: 50%;
+    height: 500px;
+}
+.about-content h2{
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+.about-content h3{
+    font-size: 60px;
+    color: white;
+}
+.about-content p{
+    color: white;
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+.contact-form h2{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 36px;
+}
+.contact-form form{
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.contact-form form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact-form form .input-box input,
+.contact-form form textarea{
+       width: 100%; 
+       padding: 1.5em;
+       font-size: 18px;
+       color: black;
+       background: rgb(241, 241, 241); 
+       border-radius: 10px;
+       margin: 1rem 0;
+       resize: none;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;  
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered;
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid orangered;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+     </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Haf</span>sat</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Portfolio</a>
+            <a href="#">Services</a>
+            <a href="#">Experience</a>
+            <a href="#">Project</a>
+            <a href="#">Education</a>
+        </nav>
+
+        <a href="https://wa.me/2349013669119" target="_blank" class="contact">contact me</a> 
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>i'm <span>Hafsat<br></span>a Frontend Developer</h1>
+
+            <p>I am a passionate frontend developer who loves creating clean and responsive user interfaces.
+                 Currently, I’m also studying cybersecurity to understand how to build safer web applications.
+                 My journey into tech started with a deep interest in design and functionality.
+                 I’m learning HTML, CSS, and JavaScript to bring websites to life.
+                 Every day, I aim to grow both in coding and in securing the digital space.</p>
+
+                 <div class="btn-box">
+                    <button class="btn-1">Hire Me</button>
+                    <button class="btn-2">Experience</button>
+                 </div>
+                 </div>
+                 <div class="img-box">
+                    <img src="image/baa35e4d0120c85012201e588db3b7f0.jpg" alt="">
+                 </div>
+    </section>
+
+    <section class="about">
+        <div class="about-img">
+            <img src="image/8a0360596173e2908c8b48479b56917b.jpg" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About<span>Me</span></h2>
+            <h3>Frontend <span>Developer</span></h3>
+            <p> I'm a dedicated learner with a strong interest in both frontend development and cybersecurity. 
+            I enjoy designing modern, user-friendly websites while also learning how to keep them safe. 
+            With a growing knowledge in HTML, CSS, and JavaScript, I'm building my skills day by day. 
+            My goal is to create beautiful web designs that are also secure and reliable. 
+            This is just the beginning of my journey into the tech world, and I'm excited to keep growing.</p>
+            <a href="#" class="btn-2">Experience</a>        
+</div>
+    </section>
+
+    <section class="contact-form">
+        <h2 class="contact-me">Contact<span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full name">
+                <input type="email" placeholder="Email">
+            </div>
+
+             <div class="input-box">
+                <input type="number" placeholder="phone Number">
+                <input type="text" placeholder="subject">
+            </div>
+
+            <textarea name="message" id="message" cols="30" rows="20" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn-1"> 
+        </form>
+            
+        <footer class="footer">
+            <div class="social">
+                <a href="https://www.instagram.com/hafsat71731" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/2349013669119" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+
+            <p class="copyrigt">@ 2025 Hafsat |all Right Reserved</p>
+        </footer>
+        
+    </section>
+</body>
+</html>
